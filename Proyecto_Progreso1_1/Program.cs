@@ -1,7 +1,13 @@
+
+using Proyecto_Progreso1_1.NewFolder;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//dependencia
+builder.Services.AddScoped<IServices, Services>();
 
 var app = builder.Build();
 
@@ -21,3 +27,4 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+

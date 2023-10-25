@@ -1,43 +1,63 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Proyecto_Progreso1_1.Models;
+using Proyecto_Progreso1_1.NewFolder;
 
 namespace Proyecto_Progreso1_1.Controllers
 {
     public class PrendaController : Controller
     {
-        // GET: PrendaController
-        public ActionResult Index()
+        private readonly IServices _Services;
+
+        public PrendaController(IServices Services)
         {
-            return View(Util.Utils.ListaPrenda);
+            _Services = Services;
         }
 
-        // GET: PrendaController/Details/5
-        public ActionResult Details(int id)
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var prendas = await _Services.GetAllPrendas();
+            return View(prendas);
         }
 
-        // GET: PrendaController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        
-        // GET: PrendaController/Edit/5
-        public ActionResult Edit(int id)
+        public IActionResult Create()
         {
             return View();
         }
 
-       
-
-        // GET: PrendaController/Delete/5
-        public ActionResult Delete(int id)
+        [HttpPost]
+        public async Task<IActionResult> Create(Prenda prenda)
         {
-            return View();
+            await _Services.CreatePrenda(prenda);
+            return RedirectToAction("Index");
         }
 
-      
+        public async Task<IActionResult> Details(int IdPrenda)
+        {
+            var prenda = await _Services.GetPrenda(IdPrenda);
+            if (prenda != null) return View(prenda);
+            return RedirectToAction("Index");
         }
+
+        public async Task<IActionResult> Edit(int IdPrenda)
+        {
+            var prenda = await _Services.GetPrenda(IdPrenda);
+            if (prenda != null) return View(prenda);
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int IdPrenda, Prenda prenda)
+        {
+            await _Services.UpdatePrenda(IdPrenda, prenda);
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Delete(int IdPrenda)
+        {
+            _Services.DeletePrenda(IdPrenda);
+            return RedirectToAction("Index");
+        }
+
     }
+}

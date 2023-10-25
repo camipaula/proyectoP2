@@ -11,7 +11,8 @@ namespace Proyecto_Progreso1_1.Util
                 Nombre = "prenda1",
                 Descripcion = "Pantalon",
                 Marca= "zara",
-                Cantidad=2
+                Cantidad=2,
+                Precio=40
                 
             },
             new Prenda()
@@ -20,7 +21,8 @@ namespace Proyecto_Progreso1_1.Util
                 Nombre = "prenda2",
                 Descripcion = "falda",
                 Marca= "zara",
-                Cantidad=3
+                Cantidad=3,
+                Precio=20
 
             }
 

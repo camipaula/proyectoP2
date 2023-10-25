@@ -24,12 +24,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tania/source/repos/Proyecto_Progreso1_1/Proyecto_Progreso1_1/Views/Prenda/Crear.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlbmRhXENyZWFyLmNzaHRtbA==
+[C:/Users/tania/source/repos/Proyecto_Progreso1_1/Proyecto_Progreso1_1/Views/Prenda/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlbmRhXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/tania/source/repos/Proyecto_Progreso1_1/Proyecto_Progreso1_1/Views/Prenda/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlbmRhXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tania/source/repos/Proyecto_Progreso1_1/Proyecto_Progreso1_1/Views/Prenda/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlbmRhXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/tania/source/repos/Proyecto_Progreso1_1/Proyecto_Progreso1_1/Views/Prenda/Index.cshtml]

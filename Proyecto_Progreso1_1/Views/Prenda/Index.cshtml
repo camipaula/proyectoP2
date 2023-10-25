@@ -3,7 +3,7 @@
     ViewData["Title"] = "Lista Prendas";
 }
 <h1>@ViewData["Title"]</h1>
-<button type="button" class="btn btn-success" onclick="location.href='@Url.Action("Create","Prenda")'">Nuevo Producto</button>
+<button type="button" class="btn btn-success" onclick="location.href='@Url.Action("Create","Prenda")'">Nueva Prenda</button>
 
 
 
@@ -15,6 +15,7 @@
             <th scope="col">Descripcion</th>
             <th scope="col">Marca</th>
             <th scope="col">Cantidad</th>
+            <th scope="col">Precio</th>
             <th scope="col">Accion</th>
         </tr>
     </thead>
@@ -28,10 +29,11 @@
                 <td>@item.Descripcion</td>
                 <td>@item.Marca</td>
                 <td>@item.Cantidad</td>
+                <td>@item.Precio</td>
                 <td>
-                    <a asp-action="Edit" asp-route-IdProducto="@item.IdPrenda" type="button" class="btn btn-success"><i class="bi bi-pencil-square"></i></a>&nbsp;
-                    <a asp-action="Details" asp-route-IdProducto="@item.IdPrenda" type="button" class="btn btn-success"><i class="bi bi-eye"></i></a>&nbsp;
-                    <a asp-action="Delete" asp-route-IdProducto="@item.IdPrenda" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
+                    <a asp-action="Edit" asp-route-IdPrenda="@item.IdPrenda" type="button" class="btn btn-success"><i class="bi bi-pencil-square"></i></a>&nbsp;
+                    <a asp-action="Details" asp-route-IdPrenda="@item.IdPrenda" type="button" class="btn btn-success"><i class="bi bi-eye"></i></a>&nbsp;
+                    <a asp-action="Delete" asp-route-IdPrenda="@item.IdPrenda" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
                 </td>
             </tr>
         }
