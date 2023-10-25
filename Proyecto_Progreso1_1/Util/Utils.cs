@@ -23,10 +23,35 @@ namespace Proyecto_Progreso1_1.Util
                 Marca= "zara",
                 Cantidad=3,
                 Precio=20
-
             }
 
         };
+
+        public static List<Accesorio> ListaAccesorio = new List<Accesorio>()
+        {
+            new Accesorio()
+            {
+                IdAccesorio = 1,
+                Nombre = "Collar",
+                Descripcion = "Collar blanco de plata",
+                Marca= "cartier",
+                Cantidad=2,
+                Precio=11
+
+            },
+            new Accesorio()
+            {
+                IdAccesorio = 2,
+                Nombre = "Aretes",
+                Descripcion = "Aretes largos",
+                Marca= "buccellati",
+                Cantidad=3,
+                Precio=20
+            }
+
+        };
+
+
     }
 }
  

@@ -59,5 +59,11 @@ namespace Proyecto_Progreso1_1.Controllers
             return RedirectToAction("Index");
         }
 
+
+        public ActionResult Accesorio()
+        {
+            return View();
+        }
+
     }
 }
