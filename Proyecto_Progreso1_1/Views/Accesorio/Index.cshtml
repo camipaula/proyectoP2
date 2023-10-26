@@ -1,11 +1,12 @@
-﻿@model List<Prenda>
+﻿@model List<Accesorio>
 @{
-    ViewData["Title"] = "Lista Prendas";
+    ViewData["Title"] = "Lista Accesorios";
 }
 <h1>@ViewData["Title"]</h1>
-<button type="button" class="btn btn-success" onclick="location.href='@Url.Action("Create","Prenda")'">Nueva Prenda</button>
-<br> <br/>
+<button type="button" class="btn btn-success" onclick="location.href='@Url.Action("Create","Accesorio")'">Nuevo Accesorio</button>
 
+<br>
+<br />
 
 <table class="table">
     <thead>
@@ -24,16 +25,16 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>@item.IdPrenda</td>
+                <td>@item.IdAccesorio</td>
                 <td>@item.Nombre</td>
                 <td>@item.Descripcion</td>
                 <td>@item.Marca</td>
                 <td>@item.Cantidad</td>
                 <td>@item.Precio</td>
                 <td>
-                    <a asp-action="Edit" asp-route-IdPrenda="@item.IdPrenda" type="button" class="btn btn-success"><i class="bi bi-pencil-square"></i></a>&nbsp;
-                    <a asp-action="Details" asp-route-IdPrenda="@item.IdPrenda" type="button" class="btn btn-success"><i class="bi bi-eye"></i></a>&nbsp;
-                    <a asp-action="Delete" asp-route-IdPrenda="@item.IdPrenda" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
+                    <a asp-action="Edit" asp-route-IdAccesorio="@item.IdAccesorio" type="button" class="btn btn-success"><i class="bi bi-pencil-square"></i></a>&nbsp;
+                    <a asp-action="Details" asp-route-IdAccesorio="@item.IdAccesorio" type="button" class="btn btn-success"><i class="bi bi-eye"></i></a>&nbsp;
+                    <a asp-action="Delete" asp-route-IdAccesorio="@item.IdAccesorio" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
                 </td>
             </tr>
         }

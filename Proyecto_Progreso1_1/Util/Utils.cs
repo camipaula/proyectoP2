@@ -52,6 +52,31 @@ namespace Proyecto_Progreso1_1.Util
         };
 
 
+        public static List<Promocion> ListaPromocion = new List<Promocion>()
+        {
+            new Promocion()
+            {
+                IdPromocion = 1,
+                Nombre = "Promocion 1",
+                Descripcion = "Blusa azul",
+                Marca= "shein",
+                Cantidad=2,
+                Precio=13
+
+            },
+            new Promocion()
+            {
+                IdPromocion = 2,
+                Nombre = "Promocion 2",
+                Descripcion = "Aretes largos",
+                Marca= "shein",
+                Cantidad=3,
+                Precio=15
+            }
+
+        };
+
+
     }
 }
  

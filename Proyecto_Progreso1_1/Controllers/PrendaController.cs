@@ -65,5 +65,10 @@ namespace Proyecto_Progreso1_1.Controllers
             return View();
         }
 
+        public ActionResult Promociones()
+        {
+            return View();
+        }
+
     }
 }

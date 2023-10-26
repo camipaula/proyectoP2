@@ -1,9 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
-namespace Proyecto_Progreso1_1.Models
+﻿namespace Proyecto_Progreso1_1.Models
 {
-    public class Accesorio
+    public class Promocion
     {
-        public int IdAccesorio { get; set; }
+        public int IdPromocion { get; set; }
 
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
