@@ -25,6 +25,7 @@ namespace APIPROYECTO1.Data
                      Nombre = "prenda1",
                      Descripcion = "Pantalon",
                      Marca = "zara",
+                     Categoria= "Deportivo",
                      Cantidad = 2,
                      Precio = 40
 
@@ -35,32 +36,11 @@ namespace APIPROYECTO1.Data
                 Nombre = "prenda2",
                 Descripcion = "falda",
                 Marca = "zara",
+                Categoria = "Casual",
                 Cantidad = 3,
                 Precio = 20
 
 
-            }
-            );
-
-            modelBuilder.Entity<Accesorios>().HasData(
-                new Accesorios()
-                {
-                    IdAccesorio = 100,
-                    Nombre = "Collar",
-                    Descripcion = "Collar blanco de plata",
-                    Marca = "cartier",
-                    Cantidad = 2,
-                    Precio = 11
-
-                },
-            new Accesorios()
-            {
-                IdAccesorio = 101,
-                Nombre = "Aretes",
-                Descripcion = "Aretes largos",
-                Marca = "buccellati",
-                Cantidad = 3,
-                Precio = 20
             }
             );
 

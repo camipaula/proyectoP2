@@ -70,7 +70,7 @@ namespace APIPROYECTO1.Controllers
         }
 
         // DELETE api/<PrendaController>/5
-        [HttpDelete("{IdPrommocion}")]
+        [HttpDelete("{IdPromocion}")]
         public async Task<IActionResult> Delete(int IdPromocion)
         {
             Promocion promocion = await _db.promociones.FirstOrDefaultAsync(x => x.IdPromocion == IdPromocion);

@@ -7,7 +7,7 @@
 namespace APIPROYECTO1.Migrations
 {
     /// <inheritdoc />
-    public partial class BaseDatos : Migration
+    public partial class CrearBaseDatos : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -38,6 +38,7 @@ namespace APIPROYECTO1.Migrations
                     Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Marca = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Categoria = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Cantidad = table.Column<int>(type: "int", nullable: false),
                     Precio = table.Column<float>(type: "real", nullable: false)
                 },
@@ -69,18 +70,16 @@ namespace APIPROYECTO1.Migrations
                 values: new object[,]
                 {
                     { 1, 2, "Collar blanco de plata", "cartier", "Collar", 11f },
-                    { 2, 3, "Aretes largos", "buccellati", "Aretes", 20f },
-                    { 100, 2, "Collar blanco de plata", "cartier", "Collar", 11f },
-                    { 101, 3, "Aretes largos", "buccellati", "Aretes", 20f }
+                    { 2, 3, "Aretes largos", "buccellati", "Aretes", 20f }
                 });
 
             migrationBuilder.InsertData(
                 table: "Prendas",
-                columns: new[] { "IdPrenda", "Cantidad", "Descripcion", "Marca", "Nombre", "Precio" },
+                columns: new[] { "IdPrenda", "Cantidad", "Categoria", "Descripcion", "Marca", "Nombre", "Precio" },
                 values: new object[,]
                 {
-                    { 1, 2, "Pantalon", "zara", "prenda1", 40f },
-                    { 2, 3, "falda", "zara", "prenda2", 20f }
+                    { 1, 2, "Deportivo", "Pantalon", "zara", "prenda1", 40f },
+                    { 2, 3, "Casual", "falda", "zara", "prenda2", 20f }
                 });
 
             migrationBuilder.InsertData(

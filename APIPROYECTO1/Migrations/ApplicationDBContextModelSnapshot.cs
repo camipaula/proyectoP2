@@ -54,24 +54,6 @@ namespace APIPROYECTO1.Migrations
                     b.HasData(
                         new
                         {
-                            IdAccesorio = 100,
-                            Cantidad = 2,
-                            Descripcion = "Collar blanco de plata",
-                            Marca = "cartier",
-                            Nombre = "Collar",
-                            Precio = 11f
-                        },
-                        new
-                        {
-                            IdAccesorio = 101,
-                            Cantidad = 3,
-                            Descripcion = "Aretes largos",
-                            Marca = "buccellati",
-                            Nombre = "Aretes",
-                            Precio = 20f
-                        },
-                        new
-                        {
                             IdAccesorio = 1,
                             Cantidad = 2,
                             Descripcion = "Collar blanco de plata",
@@ -101,6 +83,10 @@ namespace APIPROYECTO1.Migrations
                     b.Property<int>("Cantidad")
                         .HasColumnType("int");
 
+                    b.Property<string>("Categoria")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Descripcion")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -125,6 +111,7 @@ namespace APIPROYECTO1.Migrations
                         {
                             IdPrenda = 1,
                             Cantidad = 2,
+                            Categoria = "Deportivo",
                             Descripcion = "Pantalon",
                             Marca = "zara",
                             Nombre = "prenda1",
@@ -134,6 +121,7 @@ namespace APIPROYECTO1.Migrations
                         {
                             IdPrenda = 2,
                             Cantidad = 3,
+                            Categoria = "Casual",
                             Descripcion = "falda",
                             Marca = "zara",
                             Nombre = "prenda2",

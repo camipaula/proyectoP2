@@ -60,6 +60,7 @@ namespace APIPROYECTO1.Controllers
                 prenda2.Nombre = prenda.Nombre != null ? prenda.Nombre : prenda2.Nombre;
                 prenda2.Descripcion = prenda.Descripcion != null ? prenda.Descripcion : prenda2.Descripcion;
                 prenda2.Marca = prenda.Marca != null ? prenda.Marca : prenda2.Marca;
+                prenda2.Categoria = prenda.Categoria != null ? prenda.Categoria : prenda2.Categoria;
                 prenda2.Cantidad = prenda.Cantidad != null ? prenda.Cantidad : prenda2.Cantidad;
                 prenda2.Precio = prenda.Precio != null ? prenda.Precio : prenda2.Precio;
                 _db.Prendas.Update(prenda2);
