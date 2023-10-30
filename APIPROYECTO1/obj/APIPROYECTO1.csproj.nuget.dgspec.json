@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tania\\Source\\Repos\\ProyectoPrimerProgresoKCc\\APIPROYECTO1\\APIPROYECTO1.csproj": {}
+    "C:\\Users\\tania\\source\\repos\\ProyectoPrimerProgresoKCc\\APIPROYECTO1\\APIPROYECTO1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tania\\Source\\Repos\\ProyectoPrimerProgresoKCc\\APIPROYECTO1\\APIPROYECTO1.csproj": {
+    "C:\\Users\\tania\\source\\repos\\ProyectoPrimerProgresoKCc\\APIPROYECTO1\\APIPROYECTO1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tania\\Source\\Repos\\ProyectoPrimerProgresoKCc\\APIPROYECTO1\\APIPROYECTO1.csproj",
+        "projectUniqueName": "C:\\Users\\tania\\source\\repos\\ProyectoPrimerProgresoKCc\\APIPROYECTO1\\APIPROYECTO1.csproj",
         "projectName": "APIPROYECTO1",
-        "projectPath": "C:\\Users\\tania\\Source\\Repos\\ProyectoPrimerProgresoKCc\\APIPROYECTO1\\APIPROYECTO1.csproj",
+        "projectPath": "C:\\Users\\tania\\source\\repos\\ProyectoPrimerProgresoKCc\\APIPROYECTO1\\APIPROYECTO1.csproj",
         "packagesPath": "C:\\Users\\tania\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tania\\Source\\Repos\\ProyectoPrimerProgresoKCc\\APIPROYECTO1\\obj\\",
+        "outputPath": "C:\\Users\\tania\\source\\repos\\ProyectoPrimerProgresoKCc\\APIPROYECTO1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tania\\AppData\\Roaming\\NuGet\\NuGet.Config",

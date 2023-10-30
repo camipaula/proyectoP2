@@ -5,7 +5,6 @@
 }
 
 <h1>@ViewData["Title"]</h1>
-<p>En esta página se editan las prendas.</p>
 
 <form method="post">
     <div class="mb-3">
@@ -18,11 +17,11 @@
     </div>
     <div class="mb-3">
         <label class="form-label">Marca</label>
-        <input asp-for="marca" class="form-control">
+        <input asp-for="marca.Nombre" class="form-control" readonly>
     </div>
     <div class="mb-3">
         <label class="form-label">Categoria</label>
-        <input asp-for="categoria" class="form-control">
+        <input asp-for="categoria.Nombre" class="form-control" readonly>
     </div>
     <div class="mb-3">
         <label class="form-label">Cantidad</label>

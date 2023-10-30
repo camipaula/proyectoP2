@@ -302,3 +302,4 @@ C:\Users\tania\Source\Repos\ProyectoPrimerProgresoKCc\APIPROYECTO1\obj\Debug\net
 C:\Users\tania\Source\Repos\ProyectoPrimerProgresoKCc\APIPROYECTO1\obj\Debug\net7.0\APIPROYECTO1.pdb
 C:\Users\tania\Source\Repos\ProyectoPrimerProgresoKCc\APIPROYECTO1\obj\Debug\net7.0\APIPROYECTO1.genruntimeconfig.cache
 C:\Users\tania\Source\Repos\ProyectoPrimerProgresoKCc\APIPROYECTO1\obj\Debug\net7.0\ref\APIPROYECTO1.dll
+C:\Users\tania\Source\Repos\ProyectoPrimerProgresoKCc\APIPROYECTO1\bin\Debug\net7.0\Newtonsoft.Json.dll

@@ -298,3 +298,4 @@ C:\Users\tania\Source\Repos\ProyectoPrimerProgresoKCc\Proyecto_Progreso1_1\obj\D
 C:\Users\tania\Source\Repos\ProyectoPrimerProgresoKCc\Proyecto_Progreso1_1\obj\Debug\net7.0\Proyecto_Progreso1_1.pdb
 C:\Users\tania\Source\Repos\ProyectoPrimerProgresoKCc\Proyecto_Progreso1_1\obj\Debug\net7.0\Proyecto_Progreso1_1.genruntimeconfig.cache
 C:\Users\tania\Source\Repos\ProyectoPrimerProgresoKCc\Proyecto_Progreso1_1\obj\Debug\net7.0\ref\Proyecto_Progreso1_1.dll
+C:\Users\tania\Source\Repos\ProyectoPrimerProgresoKCc\Proyecto_Progreso1_1\bin\Debug\net7.0\Newtonsoft.Json.dll

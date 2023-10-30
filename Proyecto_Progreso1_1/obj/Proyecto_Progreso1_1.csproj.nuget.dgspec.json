@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tania\\Source\\Repos\\ProyectoPrimerProgresoKCc\\Proyecto_Progreso1_1\\Proyecto_Progreso1_1.csproj": {}
+    "C:\\Users\\tania\\source\\repos\\ProyectoPrimerProgresoKCc\\Proyecto_Progreso1_1\\Proyecto_Progreso1_1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tania\\Source\\Repos\\ProyectoPrimerProgresoKCc\\Proyecto_Progreso1_1\\Proyecto_Progreso1_1.csproj": {
+    "C:\\Users\\tania\\source\\repos\\ProyectoPrimerProgresoKCc\\Proyecto_Progreso1_1\\Proyecto_Progreso1_1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tania\\Source\\Repos\\ProyectoPrimerProgresoKCc\\Proyecto_Progreso1_1\\Proyecto_Progreso1_1.csproj",
+        "projectUniqueName": "C:\\Users\\tania\\source\\repos\\ProyectoPrimerProgresoKCc\\Proyecto_Progreso1_1\\Proyecto_Progreso1_1.csproj",
         "projectName": "Proyecto_Progreso1_1",
-        "projectPath": "C:\\Users\\tania\\Source\\Repos\\ProyectoPrimerProgresoKCc\\Proyecto_Progreso1_1\\Proyecto_Progreso1_1.csproj",
+        "projectPath": "C:\\Users\\tania\\source\\repos\\ProyectoPrimerProgresoKCc\\Proyecto_Progreso1_1\\Proyecto_Progreso1_1.csproj",
         "packagesPath": "C:\\Users\\tania\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tania\\Source\\Repos\\ProyectoPrimerProgresoKCc\\Proyecto_Progreso1_1\\obj\\",
+        "outputPath": "C:\\Users\\tania\\source\\repos\\ProyectoPrimerProgresoKCc\\Proyecto_Progreso1_1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tania\\AppData\\Roaming\\NuGet\\NuGet.Config",

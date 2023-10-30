@@ -37,7 +37,7 @@ namespace Proyecto_Progreso1_1.NewFolder
 
         // Realiza una solicitud HTTP POST para crear una prenda
 
-        public async Task<Prenda> CreatePrenda(Prenda prenda)
+        public async Task<Prenda> CreatePrenda(PrendaUsuario prenda)
         {
             var response = await _httpClient.PostAsJsonAsync("api/Prenda", prenda);
             return await response.Content.ReadFromJsonAsync<Prenda>();

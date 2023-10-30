@@ -10,8 +10,8 @@ namespace Proyecto_Progreso1_1.Controllers
     {
         // GET: ColorProductoController
         private readonly IServices _apiService;
-
-        public PrendaController(Services apiService)
+            
+        public PrendaController(IServices apiService)
         {
             _apiService = apiService;
         }
@@ -20,8 +20,8 @@ namespace Proyecto_Progreso1_1.Controllers
         // GET: ProductoController
         public async Task<IActionResult> Index()
         {
-            List<Prenda> tipos = await _apiService.GetAllPrendas();
-            return View(tipos);
+           List<Prenda> prendas = await _apiService.GetAllPrendas();
+            return View("Index", prendas);
         }
 
         // GET: ProductoController/Details/5
@@ -55,7 +55,7 @@ namespace Proyecto_Progreso1_1.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Prenda productoapto)
+        public async Task<IActionResult> Create(PrendaUsuario productoapto)
         {
             Prenda tipo1 = await _apiService.CreatePrenda(productoapto);
             return RedirectToAction("Index");
@@ -64,9 +64,9 @@ namespace Proyecto_Progreso1_1.Controllers
 
 
         // GET: ProductoController/Edit/5
-        public async Task<IActionResult> Edit(int idProducto)
+        public async Task<IActionResult> Edit(int idPrenda)
         {
-            Prenda tipo = await _apiService.GetPrenda(idProducto);
+            Prenda tipo = await _apiService.GetPrenda(idPrenda);
             if (tipo != null)
             {
                 return View(tipo);
@@ -77,7 +77,7 @@ namespace Proyecto_Progreso1_1.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(PrendaUsuario prendaUsuario)
         {
-            
+
             Console.WriteLine(prendaUsuario.nombre.ToString());
             Prenda tipo2 = await _apiService.GetPrenda(prendaUsuario.idPrenda);
             if (tipo2 != null)
@@ -90,12 +90,13 @@ namespace Proyecto_Progreso1_1.Controllers
         }
 
         // GET: ProductoController/Delete/5
-        public async Task<IActionResult> Delete(int idProducto)
+        public async Task<IActionResult> Delete(int idPrenda)
         {
-            _apiService.DeletePrenda(idProducto);
-            
-                return RedirectToAction("Index");
-           
+            _apiService.DeletePrenda(idPrenda);
+
+            return RedirectToAction("Index");
+
 
         }
+    }
 }

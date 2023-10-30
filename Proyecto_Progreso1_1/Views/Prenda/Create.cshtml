@@ -1,4 +1,4 @@
-﻿@model Prenda
+﻿@model PrendaUsuario
 @{
     ViewData["Title"] = "Creación de Productos";
 }
@@ -14,14 +14,17 @@
     <div class="mb-3">
         <label class="form-label">Descripción</label>
         <input asp-for="descripcion" class="form-control">
+
     </div>
     <div class="mb-3">
-        <label class="form-label">Marca</label>
-        <input asp-for="marca" class="form-control">
+        <label asp-for="MarcaIdMarca" class="form-label">Marca </label>
+        @Html.DropDownListFor(model => model.MarcaIdMarca, (IEnumerable<SelectListItem>)ViewBag.marca, "Selecciona una marca", new { @class = "form-control" })
+
     </div>
     <div class="mb-3">
-        <label class="form-label">Categoria</label>
-        <input asp-for="categoria" class="form-control">
+        <label asp-for="CategoriaIdCategoria" class="form-label">Categoria de Producto</label>
+        @Html.DropDownListFor(model => model.CategoriaIdCategoria, (IEnumerable<SelectListItem>)ViewBag.categoria, "Selecciona una categoria", new { @class = "form-control" })
+
     </div>
     <div class="mb-3">
         <label class="form-label">Cantidad</label>

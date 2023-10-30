@@ -6,8 +6,8 @@
 
         public string nombre { get; set; }
         public string descripcion { get; set; }
-        public int idMarca { get; set; }
-        public int categoria { get; set; }
+        public int MarcaIdMarca { get; set; }
+        public int CategoriaIdCategoria { get; set; }
         public int cantidad { get; set; }
 
         public float precio { get; set; }
