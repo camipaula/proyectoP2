@@ -1,0 +1,35 @@
+﻿@model List<Marca>
+@{
+    ViewData["Title"] = "Lista Prendas";
+}
+<h1>@ViewData["Title"]</h1>
+<button type="button" class="btn btn-success" onclick="location.href='@Url.Action("Create","Prenda")'">Nueva Prenda</button>
+<br> <br/>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Accion</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.IdMarca</td>
+                <td>@item.Nombre</td>
+                <td>@item.Descripcion</td>
+                <td>
+                    <a asp-action="Edit" asp-route-IdMarca="@item.IdMarca" type="button" class="btn btn-success"><i class="bi bi-pencil-square"></i></a>&nbsp;
+                    <a asp-action="Details" asp-route-IdMarca="@item.IdMarca" type="button" class="btn btn-success"><i class="bi bi-eye"></i></a>&nbsp;
+                    <a asp-action="Delete" asp-route-IdMarca="@item.IdMarca" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

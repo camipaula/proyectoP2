@@ -9,7 +9,7 @@ namespace APIPROYECTO1.Data
     {
         public ApplicationDBContext(
 
-                DbContextOptions<ApplicationDBContext> options) : base(options) { }
+                 DbContextOptions<ApplicationDBContext> options) : base(options) { }
 
         public DbSet<Prenda> Prendas { get; set; }
 
@@ -23,31 +23,17 @@ namespace APIPROYECTO1.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Prenda>().HasData(
-                 new Prenda()
-                 {
-                     IdPrenda = 1,
-                     Nombre = "prenda1",
-                     Descripcion = "Pantalon",
-                     Marca = "zara",
-                     Categoria= "Deportivo",
-                     Cantidad = 2,
-                     Precio = 40
+           
 
-                 },
-            new Prenda()
-            {
-                IdPrenda = 2,
-                Nombre = "prenda2",
-                Descripcion = "falda",
-                Marca = "zara",
-                Categoria = "Casual",
-                Cantidad = 3,
-                Precio = 20
+            modelBuilder.Entity<Prenda>()
+            .HasOne(p => p.Marca)
+            .WithMany()  // Puedes configurar WithMany si hay una relación de uno a muchos
+            .HasForeignKey(p => p.MarcaIdMarca);
 
-
-            }
-            );
+            modelBuilder.Entity<Prenda>()
+           .HasOne(p => p.Categoria)
+           .WithMany()  // Puedes configurar WithMany si hay una relación de uno a muchos
+           .HasForeignKey(p => p.CategoriaIdCategoria);
 
             modelBuilder.Entity<Accesorios>().HasData(
                 new Accesorios()

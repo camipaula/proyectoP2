@@ -9,68 +9,103 @@ namespace APIPROYECTO1.Controllers
     [ApiController]
     public class PrendaController : ControllerBase
     {
-        private readonly ApplicationDBContext _db;
+        private readonly ApplicationDBContext _db; //cuando se pone guion bajo es porque es solo de lectura solo notacion
 
         public PrendaController(ApplicationDBContext db)
         {
             _db = db;
         }
-
-        // GET: api/<PrendaController>
+        // GET: api/<ColorProducto>
         [HttpGet]
-        public async Task<IActionResult> Get()//Se hace el nétodo asincrono 
+        public async Task<IActionResult> Get()
         {
-            List<Prenda> products = await _db.Prendas.ToListAsync();
-            return Ok(products);
-        }
-       
-        // GET api/<PrendaController>/5
-        [HttpGet("{IdPrenda}")]
-        public async Task<IActionResult> Get(int IdPrenda)
-        {
-            Prenda prenda = await _db.Prendas.FirstOrDefaultAsync(x => x.IdPrenda == IdPrenda);
-            if (prenda == null)
+            try
+            {
+                // Incluye la información del TipoProducto en la consulta
+                List<Prenda> productos = await _db.Prendas
+                    .Include(p => p.Marca)  
+                    .Include(p => p.Categoria)
+                    .ToListAsync();
+
+                return Ok(productos);
+            }
+            catch (Exception ex)
             {
                 return BadRequest();
             }
-            return Ok(prenda);
+
+       
         }
 
-        // POST api/<PrendaController>
-        [HttpPost]
-        public async Task<IActionResult> Post([FromBody] Prenda prenda)
+        [HttpGet("{IdPrenda}")]
+        public async Task<IActionResult> Get(int IdPrenda)
         {
-            Prenda prenda2 = await _db.Prendas.FirstOrDefaultAsync(x => x.IdPrenda == prenda.IdPrenda);
-            if (prenda2 == null && prenda != null)
+            try
             {
+                // Incluye la información del TipoProducto en la consulta
+                Prenda tipo = await _db.Prendas
+                    .Include(p => p.Marca)
+                    .Include(p => p.Categoria)
+                    .FirstOrDefaultAsync(x => x.IdPrenda == IdPrenda);
+
+                if (tipo == null)
+                {
+                    return BadRequest();
+                }
+
+                return Ok(tipo);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest();
+            }
+        }
+
+
+
+
+        
+        [HttpPost]
+        public async Task<IActionResult> Post([FromBody] PrendaUsuario prendaUsuario)
+        {
+            Prenda prenda2 = await _db.Prendas.FirstOrDefaultAsync(x => x.Nombre.Equals(prendaUsuario.Nombre));
+            if (prenda2 == null && prendaUsuario != null)
+            {
+                var prenda = new Prenda
+                {
+                    Nombre = prendaUsuario.Nombre,
+                    Descripcion = prendaUsuario.Descripcion,
+                    CategoriaIdCategoria = prendaUsuario.CategoriaIdCategoria,
+                    MarcaIdMarca = prendaUsuario.MarcaIdMarca
+
+                };
                 await _db.Prendas.AddAsync(prenda);
                 await _db.SaveChangesAsync();
                 return Ok(prenda);
             }
-            return BadRequest("El objeto ya existe");
+            return BadRequest("La prenda ya existe");
         }
 
-        // PUT api/<PrendaController>/5
         [HttpPut("{IdPrenda}")]
-        public async Task<IActionResult> Put(int IdPrenda, [FromBody] Prenda prenda)
+        public async Task<IActionResult> Put(int IdPrenda, [FromBody] PrendaUsuario prendaUsuario)
         {
-            Prenda prenda2 = await _db.Prendas.FirstOrDefaultAsync(x => x.IdPrenda == IdPrenda);
-            if (prenda2 != null)
+            Prenda actualaModificar = await _db.Prendas.FirstOrDefaultAsync(x => x.IdPrenda == IdPrenda);
+            var nombrequeyatengo = actualaModificar.Nombre;
+            Prenda tallaquequieroponer = await _db.Prendas.FirstOrDefaultAsync(x => x.Nombre.Equals(prendaUsuario.Nombre));
+
+            if ((tallaquequieroponer == null || tallaquequieroponer.Nombre.Equals(nombrequeyatengo)) && prendaUsuario != null)
             {
-                prenda2.Nombre = prenda.Nombre != null ? prenda.Nombre : prenda2.Nombre;
-                prenda2.Descripcion = prenda.Descripcion != null ? prenda.Descripcion : prenda2.Descripcion;
-                prenda2.Marca = prenda.Marca != null ? prenda.Marca : prenda2.Marca;
-                prenda2.Categoria = prenda.Categoria != null ? prenda.Categoria : prenda2.Categoria;
-                prenda2.Cantidad = prenda.Cantidad != null ? prenda.Cantidad : prenda2.Cantidad;
-                prenda2.Precio = prenda.Precio != null ? prenda.Precio : prenda2.Precio;
-                _db.Prendas.Update(prenda2);
+                actualaModificar.Nombre = prendaUsuario.Nombre != null ? prendaUsuario.Nombre : actualaModificar.Nombre;
+                actualaModificar.Descripcion = prendaUsuario.Descripcion != null ? prendaUsuario.Descripcion : actualaModificar.Descripcion;
+                actualaModificar.Precio = prendaUsuario.Precio != null ? prendaUsuario.Precio : actualaModificar.Precio;
+                actualaModificar.Cantidad = prendaUsuario.Cantidad != null ? prendaUsuario.Cantidad : actualaModificar.Cantidad;
+                _db.Prendas.Update(actualaModificar);
                 await _db.SaveChangesAsync();
-                return Ok(prenda2);
+                return Ok(actualaModificar);
             }
-            return BadRequest("El prenda no existe");
+            return BadRequest("La prenda ya existe");
         }
 
-        // DELETE api/<PrendaController>/5
         [HttpDelete("{IdPrenda}")]
         public async Task<IActionResult> Delete(int IdPrenda)
         {

@@ -1,4 +1,5 @@
-﻿using Proyecto_Progreso1_1.Models;
+﻿
+using Proyecto_Progreso1_1.Models;
 
 namespace Proyecto_Progreso1_1.NewFolder
 {
@@ -7,7 +8,7 @@ namespace Proyecto_Progreso1_1.NewFolder
         Task<List<Prenda>> GetAllPrendas();
         Task<Prenda> GetPrenda(int IdPrenda);
         Task<Prenda> CreatePrenda(Prenda prenda);
-        Task<Prenda> UpdatePrenda(int IdPrenda, Prenda prenda);
+        Task<PrendaUsuario> UpdatePrenda(int IdPrenda, PrendaUsuario prenda);
         void DeletePrenda(int IdPrenda);
 
 
@@ -24,5 +25,20 @@ namespace Proyecto_Progreso1_1.NewFolder
         Task<Promocion> CreatePromocion(Promocion promocion);
         Task<Promocion> UpdatePromocion(int IdPromocion, Promocion promocion);
         void DeletePromocion(int IdPromocion);
+
+
+
+        Task<List<Categoria>> GetAllCategorias();
+        Task<Categoria> GetCategoria(int IdCategoria);
+        Task<Categoria> CreateCategoria(Categoria categoria);
+        Task<Categoria> UpdateCategoria(int IdCategoria, Categoria categoria);
+        void DeleteCategoria(int IdCategoria);
+
+
+        Task<List<Marca>> GetAllMarcas();
+        Task<Marca> GetMarca(int IdMarca);
+        Task<Marca> CreateMarca(Marca marca);
+        Task<Marca> UpdateMarca(int IdMarca, Marca marca);
+        void DeleteMarca(int IdMarca);
     }
 }

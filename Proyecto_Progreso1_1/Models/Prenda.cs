@@ -1,18 +1,20 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿
+using System.ComponentModel.DataAnnotations;
 
 namespace Proyecto_Progreso1_1.Models
 {
     public class Prenda
     {
-        public int IdPrenda { get; set; }
+        public int idPrenda { get; set; }
         
-        public string Nombre { get; set; }
-        public string Descripcion { get; set; }
-        public string Marca { get; set; }
-        public string Categoria { get; set; }
-        public int Cantidad { get; set; }
+        public string nombre { get; set; }
+        public string descripcion { get; set; }
+        public Marca marca { get; set; }
+        public Categoria categoria { get; set; }
+        public int cantidad { get; set; }
 
-        public float Precio { get; set; }
+        public float precio { get; set; }
+
 
     }
 }

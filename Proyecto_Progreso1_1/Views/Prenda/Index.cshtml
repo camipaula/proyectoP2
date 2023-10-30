@@ -25,17 +25,17 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>@item.IdPrenda</td>
-                <td>@item.Nombre</td>
-                <td>@item.Descripcion</td>
-                <td>@item.Marca</td>
-                <td>@item.Categoria</td>
-                <td>@item.Cantidad</td>
-                <td>@item.Precio</td>
+                <td>@item.idPrenda</td>
+                <td>@item.nombre</td>
+                <td>@item.descripcion</td>
+                <td>@item.marca</td>
+                <td>@item.categoria</td>
+                <td>@item.cantidad</td>
+                <td>@item.precio</td>
                 <td>
-                    <a asp-action="Edit" asp-route-IdPrenda="@item.IdPrenda" type="button" class="btn btn-success"><i class="bi bi-pencil-square"></i></a>&nbsp;
-                    <a asp-action="Details" asp-route-IdPrenda="@item.IdPrenda" type="button" class="btn btn-success"><i class="bi bi-eye"></i></a>&nbsp;
-                    <a asp-action="Delete" asp-route-IdPrenda="@item.IdPrenda" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
+                    <a asp-action="Edit" asp-route-IdPrenda="@item.idPrenda" type="button" class="btn btn-success"><i class="bi bi-pencil-square"></i></a>&nbsp;
+                    <a asp-action="Details" asp-route-IdPrenda="@item.idPrenda" type="button" class="btn btn-success"><i class="bi bi-eye"></i></a>&nbsp;
+                    <a asp-action="Delete" asp-route-IdPrenda="@item.idPrenda" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
                 </td>
             </tr>
         }
