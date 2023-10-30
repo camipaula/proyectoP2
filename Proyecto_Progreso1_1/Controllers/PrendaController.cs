@@ -75,14 +75,14 @@ namespace Proyecto_Progreso1_1.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(PrendaUsuario prendaUsuario)
+        public async Task<IActionResult> Edit(Prenda prendaUsuario)
         {
 
             Console.WriteLine(prendaUsuario.nombre.ToString());
             Prenda tipo2 = await _apiService.GetPrenda(prendaUsuario.idPrenda);
             if (tipo2 != null)
             {
-                PrendaUsuario tipo3 = await _apiService.UpdatePrenda(prendaUsuario.idPrenda, prendaUsuario);
+                Prenda tipo3 = await _apiService.UpdatePrenda(prendaUsuario.idPrenda, prendaUsuario);
 
                 return RedirectToAction("Index");
             }

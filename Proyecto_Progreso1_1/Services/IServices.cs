@@ -8,7 +8,7 @@ namespace Proyecto_Progreso1_1.NewFolder
         Task<List<Prenda>> GetAllPrendas();
         Task<Prenda> GetPrenda(int IdPrenda);
         Task<Prenda> CreatePrenda(PrendaUsuario prenda);
-        Task<PrendaUsuario> UpdatePrenda(int IdPrenda, PrendaUsuario prenda);
+        Task<Prenda> UpdatePrenda(int IdPrenda, Prenda prenda);
         void DeletePrenda(int IdPrenda);
 
 

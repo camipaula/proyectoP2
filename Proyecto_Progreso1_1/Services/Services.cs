@@ -32,6 +32,8 @@ namespace Proyecto_Progreso1_1.NewFolder
         {
             // Obtiene 1 solo prendas por su Id
             var response = await _httpClient.GetFromJsonAsync<Prenda>($"api/Prenda/{IdPrenda}");
+
+
             return response;
         }
 
@@ -43,18 +45,21 @@ namespace Proyecto_Progreso1_1.NewFolder
             return await response.Content.ReadFromJsonAsync<Prenda>();
         }
 
-        public async Task<PrendaUsuario> UpdatePrenda(int IdPrenda, PrendaUsuario prenda)
+        public async Task<Prenda> UpdatePrenda(int IdPrenda, Prenda prenda)
         {
-            var content = new StringContent(JsonConvert.SerializeObject(prenda), Encoding.UTF8, "application/json");
+            /*var content = new StringContent(JsonConvert.SerializeObject(prenda), Encoding.UTF8, "application/json");
 
-            var response = await _httpClient.PutAsync("api/ProductoColorTalla/" + IdPrenda, content);
+            //var response = await _httpClient.PutAsync("api/Prenda/" + IdPrenda, content);*/
+
+            var response = await _httpClient.PutAsJsonAsync("api/Prenda/" + IdPrenda,prenda);
+
             if (response.IsSuccessStatusCode)
             {
                 var json_response = await response.Content.ReadAsStringAsync();
-                PrendaUsuario prod = JsonConvert.DeserializeObject<PrendaUsuario>(json_response);
+                Prenda prod = JsonConvert.DeserializeObject<Prenda>(json_response);
                 return prod;
             }
-            return new PrendaUsuario();
+            return new Prenda();
         }
 
         // Realiza una solicitud HTTP para eliminar una prenda
