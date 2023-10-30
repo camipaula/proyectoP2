@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "INiKwUmo1rtMEna22kGaw/XSiooNXlvtNgYUdlQaGYZztzrk3z2eRrw6XxaX66TX94lLWPgUpCwDNLuGOveVaA==",
+  "dgSpecHash": "7dn6Hc+XOVQo0kQqX8CyDtWfNsOGVa5QGCYOeUDxG8LUFgM8hEU3kudRSS2DGvRm90V4GQHV77VDVMfUFxbDqg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Cristian Ceron\\Desktop\\PROYECTOS PRGRA 4\\PrimerProgresoProyectoKC\\Proyecto_Progreso1_1\\Proyecto_Progreso1_1.csproj",
+  "projectFilePath": "C:\\Users\\Cristian Ceron\\Desktop\\PROYECTOS PRGRA 4\\CopiaProyectoProgresoUno\\Proyecto_Progreso1_1\\Proyecto_Progreso1_1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Cristian Ceron\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Cristian Ceron\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

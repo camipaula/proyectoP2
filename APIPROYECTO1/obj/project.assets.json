@@ -3349,11 +3349,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Cristian Ceron\\Desktop\\PROYECTOS PRGRA 4\\PrimerProgresoProyectoKC\\APIPROYECTO1\\APIPROYECTO1.csproj",
+      "projectUniqueName": "C:\\Users\\Cristian Ceron\\Desktop\\PROYECTOS PRGRA 4\\CopiaProyectoProgresoUno\\APIPROYECTO1\\APIPROYECTO1.csproj",
       "projectName": "APIPROYECTO1",
-      "projectPath": "C:\\Users\\Cristian Ceron\\Desktop\\PROYECTOS PRGRA 4\\PrimerProgresoProyectoKC\\APIPROYECTO1\\APIPROYECTO1.csproj",
+      "projectPath": "C:\\Users\\Cristian Ceron\\Desktop\\PROYECTOS PRGRA 4\\CopiaProyectoProgresoUno\\APIPROYECTO1\\APIPROYECTO1.csproj",
       "packagesPath": "C:\\Users\\Cristian Ceron\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Cristian Ceron\\Desktop\\PROYECTOS PRGRA 4\\PrimerProgresoProyectoKC\\APIPROYECTO1\\obj\\",
+      "outputPath": "C:\\Users\\Cristian Ceron\\Desktop\\PROYECTOS PRGRA 4\\CopiaProyectoProgresoUno\\APIPROYECTO1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
