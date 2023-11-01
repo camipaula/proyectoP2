@@ -1,6 +1,6 @@
 ﻿@model PrendaUsuario
 @{
-    ViewData["Title"] = "Creación de Productos";
+    ViewData["Title"] = "Creación de Prendas";
 }
 
 <h1>@ViewData["Title"]</h1>
@@ -16,16 +16,18 @@
         <input asp-for="descripcion" class="form-control">
 
     </div>
+
     <div class="mb-3">
-        <label asp-for="MarcaIdMarca" class="form-label">Marca </label>
-        @Html.DropDownListFor(model => model.MarcaIdMarca, (IEnumerable<SelectListItem>)ViewBag.marca, "Selecciona una marca", new { @class = "form-control" })
+        <label asp-for="marcaIdMarca" class="form-label">Marca </label>
+        @Html.DropDownListFor(model => model.marcaIdMarca, (IEnumerable<SelectListItem>)ViewBag.Marca, "Selecciona una marca", new { @class = "form-control" })
 
     </div>
     <div class="mb-3">
-        <label asp-for="CategoriaIdCategoria" class="form-label">Categoria de Producto</label>
-        @Html.DropDownListFor(model => model.CategoriaIdCategoria, (IEnumerable<SelectListItem>)ViewBag.categoria, "Selecciona una categoria", new { @class = "form-control" })
+        <label asp-for="categoriaIdCategoria" class="form-label">Categoria de Producto</label>
+        @Html.DropDownListFor(model => model.categoriaIdCategoria, (IEnumerable<SelectListItem>)ViewBag.Categoria, "Selecciona una categoria", new { @class = "form-control" })
 
     </div>
+
     <div class="mb-3">
         <label class="form-label">Cantidad</label>
         <input asp-for="cantidad" class="form-control">
@@ -39,7 +41,7 @@
             <button type="submit" class="btn btn-primary">Guardar</button>
         </div>
         <div class="col-6">
-            <a asp-action="Cancelar" class="btn btn-secondary">Cancelar</a>
+            <button type="button" class="btn btn-success" onclick="location.href='@Url.Action("Index","Prenda")'">Cancelar</button>
         </div>
     </div>
 </form>

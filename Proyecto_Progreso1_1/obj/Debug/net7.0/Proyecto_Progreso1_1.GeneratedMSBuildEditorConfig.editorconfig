@@ -28,6 +28,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNvcmlvXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/tania/source/repos/ProyectoPrimerProgresoKCc/Proyecto_Progreso1_1/Views/Accesorio/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNvcmlvXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/tania/source/repos/ProyectoPrimerProgresoKCc/Proyecto_Progreso1_1/Views/Accesorio/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNvcmlvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -84,6 +88,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlbmRhXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/tania/source/repos/ProyectoPrimerProgresoKCc/Proyecto_Progreso1_1/Views/Prenda/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlbmRhXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/tania/source/repos/ProyectoPrimerProgresoKCc/Proyecto_Progreso1_1/Views/Prenda/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlbmRhXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -98,6 +106,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/tania/source/repos/ProyectoPrimerProgresoKCc/Proyecto_Progreso1_1/Views/Promocion/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvbW9jaW9uXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tania/source/repos/ProyectoPrimerProgresoKCc/Proyecto_Progreso1_1/Views/Promocion/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvbW9jaW9uXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/tania/source/repos/ProyectoPrimerProgresoKCc/Proyecto_Progreso1_1/Views/Promocion/Index.cshtml]

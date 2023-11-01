@@ -158,13 +158,13 @@ namespace Proyecto_Progreso1_1.NewFolder
 
         {
 
-            var response = await _httpClient.GetFromJsonAsync<List<Categoria>>("api/Categoria");
+            var response = await _httpClient.GetFromJsonAsync<List<Categoria>>($"api/Categoria");
             return response;
         }
 
         public async Task<Categoria> GetCategoria(int IdCategoria)
         {
-            // Obtiene 1 solo accesorio por su Id
+            // Obtiene 1 sola categoria por su Id
             var response = await _httpClient.GetFromJsonAsync<Categoria>($"api/Categoria/{IdCategoria}");
             return response;
         }
@@ -189,6 +189,7 @@ namespace Proyecto_Progreso1_1.NewFolder
         public async void DeleteCategoria(int IdCategoria)
         {
             _httpClient.DeleteAsync($"api/Categoria/{IdCategoria}");
+
         }
 
         ///////////////////////////Marca///////////////////////////////////////

@@ -76,7 +76,9 @@ namespace APIPROYECTO1.Controllers
                     Nombre = prendaUsuario.Nombre,
                     Descripcion = prendaUsuario.Descripcion,
                     CategoriaIdCategoria = prendaUsuario.CategoriaIdCategoria,
-                    MarcaIdMarca = prendaUsuario.MarcaIdMarca
+                    MarcaIdMarca = prendaUsuario.MarcaIdMarca,
+                    Precio = prendaUsuario.Precio,
+                    Cantidad = prendaUsuario.Cantidad
 
                 };
                 await _db.Prendas.AddAsync(prenda);

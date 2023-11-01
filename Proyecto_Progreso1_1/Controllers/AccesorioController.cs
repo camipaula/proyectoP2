@@ -60,5 +60,27 @@ namespace Proyecto_Progreso1_1.Controllers
         }
 
 
+        public async Task<IActionResult> Search()
+        {
+            try
+            {
+                if (int.TryParse(Request.Query["IdAccesorio"], out int idAccesorio))
+                {
+                    Accesorio accesorio2 = await _Services.GetAccesorio(idAccesorio);
+                    if (accesorio2 != null)
+                    {
+                        return View("Details", accesorio2);
+                    }
+                }
+                return View("Error");
+            }
+            catch (Exception ex)
+            {
+                return View("Error");
+            }
+
+        }
+
+
     }
 }

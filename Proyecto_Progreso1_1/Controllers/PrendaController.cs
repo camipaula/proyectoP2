@@ -44,10 +44,13 @@ namespace Proyecto_Progreso1_1.Controllers
         public async Task<IActionResult> Create()
         {
             // Obtener la lista de tipos de producto
-            List<Prenda> tipos = await _apiService.GetAllPrendas();
+            List<Prenda> prendas = await _apiService.GetAllPrendas();
+            List<Categoria> categorias = await _apiService.GetAllCategorias();
+            List<Marca> marcas = await _apiService.GetAllMarcas();
 
             // Almacena la lista de tipos de producto en ViewBag
-            ViewBag.TipoProductos = new SelectList(tipos, "idTipoProducto", "nombre");
+            ViewBag.Categoria = new SelectList(categorias, "idCategoria", "nombre");
+            ViewBag.Marca = new SelectList(marcas, "idMarca", "nombre");
 
             return View();
 
@@ -95,8 +98,30 @@ namespace Proyecto_Progreso1_1.Controllers
             _apiService.DeletePrenda(idPrenda);
 
             return RedirectToAction("Index");
-
-
         }
+
+        public async Task<IActionResult> Search()
+        {
+            try {
+                if (int.TryParse(Request.Query["IdPrenda"], out int idPrenda))
+                {
+                    Prenda prenda2 = await _apiService.GetPrenda(idPrenda);
+                    if (prenda2 != null)
+                    {
+                        return View("Details", prenda2);
+                    }
+                    return View("Error");
+                }
+                return View("Error");
+            } catch (Exception ex)
+            {
+                return View("Error");
+            }
+
+            }
+
+
+
+
     }
 }

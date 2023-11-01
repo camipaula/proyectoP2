@@ -5,8 +5,10 @@ namespace Proyecto_Progreso1_1.Models
     public class Categoria
     {
         [Key]
-        public int IdCategoria { get; set; }
-        public string Nombre { get; set; }
-        public string Descripcion { get; set; }
+        public int idCategoria { get; set; }
+
+        public int categoriaIdCategoria { get; set; }
+        public string nombre { get; set; }
+        public string descripcion { get; set; }
     }
 }

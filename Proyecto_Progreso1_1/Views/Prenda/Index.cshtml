@@ -7,6 +7,19 @@
 <br> <br/>
 
 
+<p>Buscar por ID:</p>
+
+<form method="get" action="@Url.Action("Search", "Prenda")">
+    <div class="mb-3">
+        <label class="form-label">ID:</label>
+        <input type="text" name="IdPrenda" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+
+</form>
+
+
+
 <table class="table">
     <thead>
         <tr>
@@ -28,8 +41,8 @@
                 <td>@item.idPrenda</td>
                 <td>@item.nombre</td>
                 <td>@item.descripcion</td>
-                <td>@item.marca.Nombre</td>
-                <td>@item.categoria.Nombre</td>
+                <td>@item.marca.nombre</td>
+                <td>@item.categoria.nombre</td>
                 <td>@item.cantidad</td>
                 <td>@item.precio</td>
                 <td>

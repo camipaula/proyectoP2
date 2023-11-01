@@ -60,5 +60,27 @@ namespace Proyecto_Progreso1_1.Controllers
         }
 
 
+        public async Task<IActionResult> Search()
+        {
+            try
+            {
+                if (int.TryParse(Request.Query["IdPromocion"], out int idPromocion))
+                {
+                    Promocion promocion2 = await _Services.GetPromocion(idPromocion);
+                    if (promocion2 != null)
+                    {
+                        return View("Details", promocion2);
+                    }
+                }
+                return View("Error");
+            }
+            catch (Exception ex)
+            {
+                return View("Error");
+            }
+
+        }
+
+
     }
 }
