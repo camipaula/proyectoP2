@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ozDQsiqiGWadwh3W+MF7TrCWqWlOQIhQZLOF39ISiVnmj2XF1tPgioFBQ5pNubK1LU+7TohiCzsMHZ86RqYdPw==",
+  "dgSpecHash": "olKWSUwJ5e6eWt+FyCJ9JG1wkJzKCbh6942vQFu/Uhmlk7aWzF0BlwCm2VSxuIiZqT46gzud2vnYm/nBMigOpg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tania\\source\\repos\\ProyectoPrimerProgresoKCc\\Proyecto_Progreso1_1\\Proyecto_Progreso1_1.csproj",
+  "projectFilePath": "C:\\Users\\tania\\Downloads\\proyectoWeb\\proyectoWeb\\proyectoo\\Proyecto_Progreso1_1\\Proyecto_Progreso1_1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tania\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\tania\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

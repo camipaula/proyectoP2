@@ -91,7 +91,7 @@ namespace APIPROYECTO1.Controllers
         [HttpPut("{IdPrenda}")]
         public async Task<IActionResult> Put(int IdPrenda, [FromBody] PrendaUsuario prendaUsuario)
         {
-            Prenda actualaModificar = await _db.Prendas.FirstOrDefaultAsync(x => x.IdPrenda == IdPrenda);
+            Prenda actualaModificar = await _db.Prendas.FirstOrDefaultAsync(x => x.IdPrenda == IdPrenda); // encontramos el objeto en base a la llave for[anea
             var nombrequeyatengo = actualaModificar.Nombre;
             Prenda tallaquequieroponer = await _db.Prendas.FirstOrDefaultAsync(x => x.Nombre.Equals(prendaUsuario.Nombre));
 
