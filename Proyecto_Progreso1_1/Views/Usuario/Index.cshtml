@@ -1,0 +1,50 @@
+﻿@model List<Usuario>
+@{
+    ViewData["Title"] = "Lista Administradores";
+}
+<h1>@ViewData["Title"]</h1>
+<button type="button" class="btn btn-success" onclick="location.href='@Url.Action("Create","Usuario")'">Nuevo Administrador</button>
+<br>
+<br />
+
+
+<p>Buscar por ID:</p>
+
+<form method="get" action="@Url.Action("Search", "Usuario")">
+    <div class="mb-3">
+        <label class="form-label">ID:</label>
+        <input type="text" name="IdUsuario" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+
+</form>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">idUsuario</th>
+            <th scope="col">usuario</th>
+            <th scope="col">contrsena</th>
+            <th scope="col">Tipo</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.idUsuario</td>
+                <td>@item.usuario</td>
+                <td>@item.contrasena</td>
+                <td>@item.tipo</td>
+                <td>
+                    <a asp-action="Edit" asp-route-IdUsuario="@item.idUsuario" type="button" class="btn btn-success"><i class="bi bi-pencil-square"></i></a>&nbsp;
+                    <a asp-action="Details" asp-route-IdUsuario="@item.idUsuario" type="button" class="btn btn-success"><i class="bi bi-eye"></i></a>&nbsp;
+                    <a asp-action="Delete" asp-route-IdUsuario="@item.idUsuario" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

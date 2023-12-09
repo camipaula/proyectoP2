@@ -238,7 +238,7 @@ namespace Proyecto_Progreso1_1.NewFolder
 
 
 
-        ///////////////////////////Marca///////////////////////////////////////
+        ///////////////////////////Usuarios///////////////////////////////////////
         public async Task<List<Usuario>> GetAllUsuarios()
         {
 
@@ -253,20 +253,31 @@ namespace Proyecto_Progreso1_1.NewFolder
             return response;
         }
 
-        // Realiza una solicitud HTTP POST para crear un accesorio
 
-        public async Task<Usuario> CreateUsuario(Usuario usuario)
+
+
+
+        // Realiza una solicitud HTTP POST para crear un usuario
+
+        public async Task<Usuario> CreateUsuario(Usuario usuarioo)
         {
-            var response = await _httpClient.PostAsJsonAsync("api/Usuario", usuario);
+            var response = await _httpClient.PostAsJsonAsync("api/Usuario/admin", usuarioo);
             return await response.Content.ReadFromJsonAsync<Usuario>();
         }
+
+
+
 
         public async Task<Usuario> UpdateUsuario(int IdUsuario, Usuario usuario)
         {
             // Realiza una solicitud HTTP PUT para modificar un accesorio
-            var response = await _httpClient.PutAsJsonAsync($"api/Usuario/ {IdUsuario}", usuario);
+            var response = await _httpClient.PutAsJsonAsync($"api/Usuario/{IdUsuario}", usuario);
             return await response.Content.ReadFromJsonAsync<Usuario>();
         }
+
+
+
+
 
         // Realiza una solicitud HTTP para eliminar un accesorio
 
@@ -288,7 +299,18 @@ namespace Proyecto_Progreso1_1.NewFolder
             return null;
         }
 
+        public async Task<List<Usuario>> GetAdmin()
+        {
+
+            var response = await _httpClient.GetFromJsonAsync<List<Usuario>>("api/Usuario/admin");
+            return response;
+        }
+
+
+
+
     }
+
 
 
 

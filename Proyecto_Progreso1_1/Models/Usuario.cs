@@ -7,6 +7,6 @@
         public string usuario { get; set; }
         public string contrasena { get; set; }
 
-        public Boolean tipo { get; set; }
+       public bool tipo { get; set; }
     }
 }

@@ -50,6 +50,8 @@ namespace Proyecto_Progreso1_1.NewFolder
         void DeleteUsuario(int IdUsuario);
 
         Task<Usuario> GetUsuario(string usuario, string contrasena);
+        Task<List<Usuario>> GetAdmin();
+
 
 
     }

@@ -25,9 +25,9 @@ namespace Proyecto_Progreso1_1.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> login(string usuario,string contrasena )
+        public async Task<IActionResult> login(string usuario, string contrasena)
         {
-            Usuario usuario1 = await _apiService.GetUsuario(usuario,contrasena);
+            Usuario usuario1 = await _apiService.GetUsuario(usuario, contrasena);
             if (usuario1 == null)
             {
                 return View();
@@ -37,17 +37,17 @@ namespace Proyecto_Progreso1_1.Controllers
 
 
 
-        // GET: ProductoController
+        // GET: UsuarioController
         public async Task<IActionResult> Index()
         {
-            List<Usuario> usuarios = await _apiService.GetAllUsuarios();
+            List<Usuario> usuarios = await _apiService.GetAdmin();
             return View("Index", usuarios);
         }
 
-        // GET: ProductoController/Details/5
-        public async Task<IActionResult> Details(int IdMarca)
+        // GET: UsuarioController/Details/5
+        public async Task<IActionResult> Details(int IdUsuario)
         {
-            Marca tipo2 = await _apiService.GetMarca(IdMarca);
+            Usuario tipo2 = await _apiService.GetUsuario(IdUsuario);
             if (tipo2 != null)
             {
                 return View(tipo2);
@@ -59,28 +59,26 @@ namespace Proyecto_Progreso1_1.Controllers
             return RedirectToAction("Index");
         }
 
-        // GET: ProductoController/Create
-        public async Task<IActionResult> Create()
-        {
-            // Obtener la lista de categorias
-            List<Marca> marcas = await _apiService.GetAllMarcas();
 
+
+        public IActionResult Create()
+        {
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Usuario usuarioo)
+        public async Task<IActionResult> Create(Usuario usuariooo)
         {
-            Usuario tipo1 = await _apiService.CreateUsuario(usuarioo);
+            Usuario usuario = await _apiService.CreateUsuario(usuariooo);
             return RedirectToAction("Index");
         }
 
 
 
-        // GET: ProductoController/Edit/5
-        public async Task<IActionResult> Edit(int idMarca)
+
+        public async Task<IActionResult> Edit(int idUsuario)
         {
-            Marca tipo = await _apiService.GetMarca(idMarca);
+            Usuario tipo = await _apiService.GetUsuario(idUsuario);
             if (tipo != null)
             {
                 return View(tipo);
@@ -89,29 +87,61 @@ namespace Proyecto_Progreso1_1.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(Marca marcac)
+        public async Task<IActionResult> Edit(Usuario usuarioe)
         {
 
-            Console.WriteLine(marcac.nombre.ToString());
-            Marca tipo2 = await _apiService.GetMarca(marcac.idMarca);
+            Usuario tipo2 = await _apiService.GetUsuario(usuarioe.idUsuario);
             if (tipo2 != null)
             {
-                Marca tipo3 = await _apiService.UpdateMarca(marcac.idMarca, marcac);
+                Usuario tipo3 = await _apiService.UpdateUsuario(usuarioe.idUsuario, usuarioe);
 
                 return RedirectToAction("Index");
             }
             return View();
         }
 
+
+
+
+
+
         // GET: ProductoController/Delete/5
-        public async Task<IActionResult> Delete(int idMarca)
+        public async Task<IActionResult> Delete(int idUsuario)
         {
-            _apiService.DeleteMarca(idMarca);
+            _apiService.DeleteUsuario(idUsuario);
 
             return RedirectToAction("Index");
 
 
         }
+
+
+
+        public async Task<IActionResult> Search()
+        {
+            try
+            {
+                if (int.TryParse(Request.Query["IdUsuario"], out int idUsuario))
+                {
+                    Usuario usuario2 = await _apiService.GetUsuario(idUsuario);
+                    if (usuario2 != null )
+                    {
+                        if (usuario2.tipo != false) {
+                            return View("Details", usuario2);
+                        }
+                         return View("Error, no se encuentra el usuario");
+                    }
+                    return View("Error, no se encuentra el usuario");
+                }
+                return View("Error no se enconrto el usuario");
+            }
+            catch (Exception ex)
+            {
+                return View("Error no se enconrto el usuario");
+            }
+
+        }
+
 
     }
 }
