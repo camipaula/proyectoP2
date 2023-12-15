@@ -255,13 +255,13 @@ namespace Proyecto_Progreso1_1.NewFolder
 
 
 
-
+        
 
         // Realiza una solicitud HTTP POST para crear un usuario
 
         public async Task<Usuario> CreateUsuario(Usuario usuarioo)
         {
-            var response = await _httpClient.PostAsJsonAsync("api/Usuario/admin", usuarioo);
+            var response = await _httpClient.PostAsJsonAsync("api/Usuario/admin", usuarioo); //LLAMA AL METODO ADMIN
             return await response.Content.ReadFromJsonAsync<Usuario>();
         }
 
@@ -286,7 +286,7 @@ namespace Proyecto_Progreso1_1.NewFolder
             _httpClient.DeleteAsync($"api/Usuario/{IdUsuario}");
         }
 
-
+        //USA PARA EL LOGIN
         public async Task<Usuario> GetUsuario(string usuario, string contrasena)
         {
             var response = await _httpClient.GetAsync("api/Usuario/" + usuario + "/" + contrasena);
@@ -298,6 +298,8 @@ namespace Proyecto_Progreso1_1.NewFolder
             }
             return null;
         }
+
+        //TODA LA LISTA
 
         public async Task<List<Usuario>> GetAdmin()
         {

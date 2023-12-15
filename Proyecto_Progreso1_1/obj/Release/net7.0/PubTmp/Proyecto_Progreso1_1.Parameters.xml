@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="ProyectoProgreso1120231211073317" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\tania\\Downloads\\proyectoWeb\\proyectoWeb\\proyectoo\\Proyecto_Progreso1_1\\obj\\Release\\net7\.0\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>
